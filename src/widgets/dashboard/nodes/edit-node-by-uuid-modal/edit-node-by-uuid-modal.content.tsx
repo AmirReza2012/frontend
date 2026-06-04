@@ -76,7 +76,7 @@ export const EditNodeByUuidModalContent = (props: IProps) => {
                 notifyPercent: fetchedNode.notifyPercent ?? undefined,
                 consumptionMultiplier: fetchedNode.consumptionMultiplier ?? undefined,
                 tags: fetchedNode.tags ?? undefined,
-
+                proxyUrl: fetchedNode.proxyUrl ?? undefined,
                 configProfile: {
                     activeConfigProfileUuid:
                         fetchedNode.configProfile.activeConfigProfileUuid ?? '',
