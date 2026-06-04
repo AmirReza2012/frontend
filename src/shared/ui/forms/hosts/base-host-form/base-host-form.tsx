@@ -71,6 +71,7 @@ import { BaseOverlayHeader } from '@shared/ui/overlays/base-overlay-header'
 import { MihomoLogo, SingboxLogo, StashLogo } from '@shared/ui/logos'
 import { TemplateInfoPopoverShared } from '@shared/ui/popovers'
 import { ChipMultiSelect } from '@shared/ui/chip-multi-select'
+import { TagInputPill } from '@shared/ui/tag-input-pill'
 import { DrawerFooter } from '@shared/ui/drawer-footer'
 import { handleFormErrors } from '@shared/utils/misc'
 import { XrayLogo } from '@shared/ui/logos/xray-logo'
@@ -483,6 +484,9 @@ export const BaseHostForm = <T extends CreateHostCommand.Request | UpdateHostCom
                                                     .map((key) => form.errors[key])
                                                     .join(', ') || form.getInputProps('tags').error
                                             }
+                                            renderPill={({ value, onRemove }) => (
+                                                <TagInputPill onRemove={onRemove} value={value} />
+                                            )}
                                         />
 
                                         <MultiSelect
@@ -541,6 +545,12 @@ export const BaseHostForm = <T extends CreateHostCommand.Request | UpdateHostCom
                                                     </>
                                                 )
                                             }}
+                                            renderPill={({ option, onRemove }) => (
+                                                <TagInputPill
+                                                    onRemove={onRemove}
+                                                    value={option.label}
+                                                />
+                                            )}
                                             searchable
                                             {...form.getInputProps('nodes')}
                                         />
@@ -578,6 +588,12 @@ export const BaseHostForm = <T extends CreateHostCommand.Request | UpdateHostCom
                                                     />
                                                 )
                                             }}
+                                            renderPill={({ option, onRemove }) => (
+                                                <TagInputPill
+                                                    onRemove={onRemove}
+                                                    value={option.label}
+                                                />
+                                            )}
                                             searchable
                                             {...form.getInputProps('excludedInternalSquads')}
                                         />

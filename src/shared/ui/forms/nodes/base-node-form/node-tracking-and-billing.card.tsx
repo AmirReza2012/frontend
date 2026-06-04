@@ -20,6 +20,7 @@ import { useState } from 'react'
 
 import { SelectInfraProviderShared } from '@shared/ui/infra-billing/select-infra-provider/select-infra-provider.shared'
 import { BaseOverlayHeader } from '@shared/ui/overlays/base-overlay-header'
+import { TagInputPill } from '@shared/ui/tag-input-pill'
 import { SectionCard } from '@shared/ui/section-card'
 import { useGetNodesTags } from '@shared/api/hooks'
 
@@ -202,6 +203,9 @@ export const NodeTrackingAndBillingCard = <
                                     .map((key) => form.errors[key])
                                     .join(', ') || form.getInputProps('tags').error
                             }
+                            renderPill={({ value, onRemove }) => (
+                                <TagInputPill onRemove={onRemove} value={value} />
+                            )}
                         />
 
                         <Stack gap={6}>

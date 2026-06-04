@@ -32,6 +32,7 @@ import {
 } from '@shared/api/hooks'
 import { COUNTRIES } from '@shared/ui/forms/nodes/base-node-form/constants'
 import { LoaderModalShared } from '@shared/ui/loader-modal'
+import { TagInputPill } from '@shared/ui/tag-input-pill'
 import { queryClient } from '@shared/api/query-client'
 import { SectionCard } from '@shared/ui/section-card'
 
@@ -164,6 +165,9 @@ export const BulkUpdateNodesModalContent = (props: IProps) => {
                                     .map((key) => form.errors[key])
                                     .join(', ') || form.getInputProps('fields.tags').error
                             }
+                            renderPill={({ value, onRemove }) => (
+                                <TagInputPill onRemove={onRemove} value={value} />
+                            )}
                         />
 
                         <Textarea
