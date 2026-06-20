@@ -48,7 +48,7 @@ export function resolveHostFormFields(
         case 'vlessRouteId':
             return {
                 description: t('base-host-form.vless-route-description'),
-                label: 'Vless Route ID',
+                label: t('base-host-form.vless-route-id'),
                 inputType: 'number',
                 hoverCard: hoverCard(t('base-host-form.vless-route-description')),
                 leftSection: <PiIdentificationBadge size={px('1.2rem')} />

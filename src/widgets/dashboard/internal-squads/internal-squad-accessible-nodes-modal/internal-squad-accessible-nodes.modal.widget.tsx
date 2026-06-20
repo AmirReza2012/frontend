@@ -87,7 +87,7 @@ export const InternalSquadAccessibleNodesModalWidget = () => {
                             (acc, node) => acc + node.activeInbounds.length,
                             0
                         )}{' '}
-                        Inbounds
+                        {t('user-accessible-nodes.modal.widget.inbounds')}
                     </Badge>
                 </Group>
 
@@ -96,7 +96,7 @@ export const InternalSquadAccessibleNodesModalWidget = () => {
                     columns={[
                         {
                             accessor: 'nodeName',
-                            title: 'Nodes / Inbounds',
+                            title: t('user-accessible-nodes.modal.widget.nodes-inbounds'),
                             noWrap: true,
                             render: (node: AccessibleNode) => (
                                 <>
@@ -118,7 +118,7 @@ export const InternalSquadAccessibleNodesModalWidget = () => {
                         },
                         {
                             accessor: 'configProfileName',
-                            title: 'Config Profile',
+                            title: t('show-config-profiles-with-inbounds.feature.config-profile'),
                             textAlign: 'right',
                             width: 200,
                             render: (node: AccessibleNode) => (
@@ -132,7 +132,7 @@ export const InternalSquadAccessibleNodesModalWidget = () => {
                             accessor: 'activeInbounds',
                             textAlign: 'right',
                             width: 150,
-                            title: 'Inbounds',
+                            title: t('use-nodes-table-widget.inbounds'),
                             render: (node: AccessibleNode) => node.activeInbounds.length
                         }
                     ]}

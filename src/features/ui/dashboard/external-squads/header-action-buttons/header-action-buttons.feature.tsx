@@ -70,7 +70,7 @@ export const ExternalSquadsHeaderActionButtonsFeature = (props: IProps) => {
 
             <ActionIconGroup>
                 <Tooltip
-                    label={t('header-action-buttons.feature.update-external-squads')}
+                    label={t('header-action-buttons.feature.common.update')}
                     withArrow
                 >
                     <ActionIcon

@@ -70,7 +70,7 @@ export const useUserTableColumns = (
             },
             {
                 accessorKey: 'id',
-                header: 'ID',
+                header: t('use-table-columns.id'),
                 enableColumnFilterModes: false,
                 accessorFn: (originalRow) => originalRow.id,
                 size: 80
@@ -199,7 +199,7 @@ export const useUserTableColumns = (
 
             {
                 accessorKey: 'telegramId',
-                header: 'Telegram ID',
+                header: t('use-table-columns.telegram-id'),
                 accessorFn: (originalRow) => originalRow.telegramId || '–',
                 minSize: 100,
                 size: 200,
@@ -332,7 +332,7 @@ export const useUserTableColumns = (
 
             {
                 accessorKey: 'email',
-                header: 'Email',
+                header: t('use-table-columns.email'),
                 accessorFn: (originalRow) => originalRow.email || '–',
                 minSize: 100,
                 size: 200,
@@ -464,7 +464,7 @@ export const useUserTableColumns = (
             },
             {
                 accessorKey: 'uuid',
-                header: 'UUID',
+                header: t('use-table-columns.uuid'),
                 accessorFn: (originalRow) => originalRow.uuid,
                 minSize: 400,
                 maxSize: 800,
@@ -476,7 +476,7 @@ export const useUserTableColumns = (
             },
             {
                 accessorKey: 'vlessUuid',
-                header: 'Vless UUID',
+                header: t('use-table-columns.vless-uuid'),
                 accessorFn: (originalRow) => originalRow.vlessUuid,
                 minSize: 400,
                 enableColumnFilterModes: false,
@@ -487,7 +487,7 @@ export const useUserTableColumns = (
             },
             {
                 accessorKey: 'trojanPassword',
-                header: 'Trojan Password',
+                header: t('use-table-columns.trojan-password'),
                 accessorFn: (originalRow) => originalRow.trojanPassword,
                 minSize: 400,
                 maxSize: 800,
@@ -498,7 +498,7 @@ export const useUserTableColumns = (
             },
             {
                 accessorKey: 'hwidDeviceLimit',
-                header: 'HWID Device Limit',
+                header: t('use-table-columns.hwid-limit'),
                 accessorFn: (originalRow) => originalRow.hwidDeviceLimit ?? '–',
                 columnFilterModeOptions: [
                     'equals',

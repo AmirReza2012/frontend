@@ -21,6 +21,7 @@ import {
     PiUsersDuotone
 } from 'react-icons/pi'
 import { GetNodesMetricsCommand } from '@remnawave/backend-contract'
+import { useTranslation } from 'react-i18next'
 import { VirtuosoMasonry } from '@virtuoso.dev/masonry'
 import { useCallback, useMemo } from 'react'
 import { TbServer } from 'react-icons/tb'
@@ -37,6 +38,7 @@ export const NodeMetricsWidget = () => {
     const { data: nodeMetrics, isLoading } = useGetNodesMetrics()
     const openModalWithData = useModalsStoreOpenWithData()
     const isMobile = useIsMobile()
+    const { t } = useTranslation()
 
     const handleNodeClick = useCallback(
         (nodeUuid: string) => {
@@ -81,7 +83,7 @@ export const NodeMetricsWidget = () => {
                             <PiProhibitDuotone size="32px" />
                         </ThemeIcon>
                         <Text c="gray.5" size="lg">
-                            No nodes metrics available
+                            {t('nodes-metrics.no-data')}
                         </Text>
                     </Stack>
                 </Center>
@@ -116,7 +118,7 @@ export const NodeMetricsWidget = () => {
                     IconComponent={TbServer}
                     iconVariant="soft"
                     isLoading={isLoading}
-                    title="Total Nodes"
+                    title={t('nodes-metrics.total-nodes')}
                     value={overallStats?.totalNodes || 0}
                 />
                 <MetricCardShared
@@ -124,7 +126,7 @@ export const NodeMetricsWidget = () => {
                     IconComponent={PiPulseDuotone}
                     iconVariant="soft"
                     isLoading={isLoading}
-                    title="Active Nodes"
+                    title={t('nodes-metrics.active-nodes')}
                     value={overallStats?.activeNodes || 0}
                 />
                 <MetricCardShared
@@ -132,7 +134,7 @@ export const NodeMetricsWidget = () => {
                     IconComponent={PiUsersDuotone}
                     iconVariant="soft"
                     isLoading={isLoading}
-                    title="Users Online"
+                    title={t('nodes-metrics.online-users')}
                     value={overallStats?.totalUsersOnline || 0}
                 />
                 <MetricCardShared
@@ -140,7 +142,7 @@ export const NodeMetricsWidget = () => {
                     IconComponent={PiGlobeSimple}
                     iconVariant="soft"
                     isLoading={isLoading}
-                    title="Total Inbounds"
+                    title={t('nodes-metrics.total-inbounds')}
                     value={overallStats?.totalInbounds || 0}
                 />
             </SimpleGrid>
@@ -167,19 +169,18 @@ export const NodeMetricsWidget = () => {
                                             <PiInfo size="0.6rem" />
                                         </ThemeIcon>
                                         <Text fw={600} size="sm">
-                                            Additional Information
+                                            {t('nodes-metrics.additional-info')}
                                         </Text>
                                     </Group>
                                     <Stack gap="xs">
                                         <Text c="dimmed" size="xs">
-                                            • Updates every 30 seconds from /metrics endpoint
+                                            • {t('nodes-metrics.text-1')}
                                         </Text>
                                         <Text c="dimmed" size="xs">
-                                            • Not all data is visualized on this dashboard
+                                            • {t('nodes-metrics.text-2')}
                                         </Text>
                                         <Text c="dimmed" size="xs">
-                                            • Inbound/Outbound traffic is the sum of all traffic
-                                            from Panel or Node startup
+                                            • {t('nodes-metrics.text-3')}
                                         </Text>
                                     </Stack>
                                 </Stack>
@@ -187,7 +188,7 @@ export const NodeMetricsWidget = () => {
                         </HoverCard>
 
                         <Text c="blue.4" fw={500} size="sm">
-                            Metrics from Prometheus
+                            {t('nodes-metrics.from-prometheus')}
                         </Text>
                     </Group>
                     <Group align="center" gap="xs">
@@ -201,7 +202,7 @@ export const NodeMetricsWidget = () => {
                             visibleFrom="xs"
                         />
                         <Text c="gray.4" size="xs">
-                            Live updates from /metrics endpoint
+                            {t('nodes-metrics.live-updates')}
                         </Text>
                     </Group>
                 </Group>

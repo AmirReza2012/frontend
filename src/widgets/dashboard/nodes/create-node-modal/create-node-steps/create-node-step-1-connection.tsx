@@ -99,7 +99,7 @@ export const CreateNodeStep1Connection = ({ form, onNext, pubKey, port }: IProps
                 <Divider />
                 <Stack gap="xs">
                     <CopyableFieldShared
-                        label="Secret Key (SECRET_KEY)"
+                        label={t('base-node-form.secret-key')}
                         leftSection={<TbCertificate size={16} />}
                         size="sm"
                         value={`${pubKey?.trimEnd()}`}
@@ -149,7 +149,7 @@ export const CreateNodeStep1Connection = ({ form, onNext, pubKey, port }: IProps
 
                         <NumberInput
                             key={form.key('port')}
-                            label="Node Port"
+                            label={t('base-node-form.port')}
                             {...form.getInputProps('port')}
                             allowDecimal={false}
                             allowNegative={false}
@@ -249,7 +249,7 @@ export const CreateNodeStep1Connection = ({ form, onNext, pubKey, port }: IProps
                                     label={t('use-nodes-table-widget.tags')}
                                     leftSection={<PiTagDuotone size="16px" />}
                                     maxTags={10}
-                                    placeholder="Enter tags (comma, space, semicolon)"
+                                    placeholder={t('use-nodes-table-widget.tags-placeholder')}
                                     size="sm"
                                     splitChars={[',', ' ', ';']}
                                     {...form.getInputProps('tags')}

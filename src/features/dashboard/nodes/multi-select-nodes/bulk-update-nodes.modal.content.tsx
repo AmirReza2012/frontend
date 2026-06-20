@@ -157,7 +157,7 @@ export const BulkUpdateNodesModalContent = (props: IProps) => {
                             label={t('use-nodes-table-widget.tags')}
                             leftSection={<PiTagDuotone size="16px" />}
                             maxTags={10}
-                            placeholder="Enter tags (comma, space, semicolon)"
+                            placeholder={t('use-nodes-table-widget.tags-placeholder')}
                             splitChars={[',', ' ', ';']}
                             {...form.getInputProps('fields.tags')}
                             error={

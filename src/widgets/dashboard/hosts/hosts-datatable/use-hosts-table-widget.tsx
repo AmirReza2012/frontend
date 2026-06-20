@@ -120,7 +120,7 @@ export const HOST_TEXT_FIELDS: HostTextFieldConfig[] = [
         getValue: (host) => host.vlessRouteId,
         hiddenByDefault: true,
         key: 'vlessRouteId',
-        label: () => 'VLESS Route ID'
+        label: (t) => t('base-host-form.vless-route-id')
     },
     {
         accessor: 'pinnedPeerCertSha256',
@@ -191,7 +191,7 @@ export const HOST_SELECT_FIELDS: HostSelectFieldConfig[] = [
         getValues: (host) => (host.mihomoIpVersion ? [host.mihomoIpVersion] : []),
         hiddenByDefault: true,
         key: 'mihomoIpVersion',
-        label: () => 'Mihomo IP Version',
+        label: (t) => t('base-host-form.mihomo-ip-version'),
         sortable: true
     },
     {

@@ -91,7 +91,7 @@ export const NodeVitalsCard = <T extends CreateNodeCommand.Request | UpdateNodeC
 
                             <NumberInput
                                 key={form.key('port')}
-                                label="Node Port"
+                                label={t('base-node-form.port')}
                                 {...form.getInputProps('port')}
                                 allowDecimal={false}
                                 allowNegative={false}
@@ -109,7 +109,7 @@ export const NodeVitalsCard = <T extends CreateNodeCommand.Request | UpdateNodeC
                         </Group>
 
                         <CopyableFieldShared
-                            label="Secret Key (SECRET_KEY)"
+                            label={t('base-node-form.secret-key')}
                             leftSection={<TbCertificate size={16} />}
                             size="sm"
                             value={`${pubKey?.pubKey.trimEnd() ?? 'Error loading...'}`}

@@ -87,6 +87,7 @@
     "simple-metrics": {
         "system-uptime": "System uptime",
         "ram-usage": "System RAM Used",
+        "ram-total": "System RAM Total",
         "total-traffic": "Cumulative Traffic",
         "total-online-on-nodes": "Users Online Across Nodes"
     },
@@ -141,6 +142,7 @@
     },
     "use-table-columns": {
         "username": "Username",
+        "id": "ID",
         "status": "Status",
         "last-connected-node": "Last Connected Node",
         "expire-at": "Expires",
@@ -154,9 +156,15 @@
         "lifetime-used": "Lifetime Usage",
         "sub-link-revoked-at": "Last Revoked",
         "created-at": "Created",
+        "uuid": "UUID",
+        "vless-uuid": "VLESS UUID",
+        "trojan-password": "Trojan Password",
+        "hwid-limit": "HWID Limit",
         "internal-squads": "Internal Squads",
+        "email": "Email",
         "first-connected-at": "First Connected",
         "sub-last-opened-at": "Last Subscription Request",
+        "telegram-id": "Telegram ID",
         "tag": "Tag",
         "used-traffic": "Used Traffic (%)"
     },
@@ -166,7 +174,6 @@
     "header-action-buttons": {
         "feature": {
             "create-new-host": "Create new host",
-            "update-external-squads": "Update external squads",
             "create-new-external-squad": "Create new external squad",
             "external-squad-name": "External Squad Name",
             "update-templates": "Update templates", // Redundant
@@ -436,7 +443,9 @@
         "hidden-host-description": "By default, Remnawave will not include hidden hosts in the subscription. Hidden host can be used with Mihomo and Xray-Json Advanced, Raw.",
         "server-description-1": "In supported clients, the protocol name (e.g. vless) will be replaced with the description specified here.",
         "server-description-2": "Not all client applications support this feature. For more details, refer to the documentation of the apps listed below.",
-        "supported-clients": "Supported clients"
+        "supported-clients": "Supported clients",
+        "mihomo-ip-version": "Mihomo IP version",
+        "vless-route-id": "VLESS Route ID"
     },
     "base-node-form": {
         "country": "Country",
@@ -444,6 +453,8 @@
         "internal-name": "Internal Name",
         "internal-name-placeholder": "e.g. US-NY-Node-01",
         "address": "Address",
+        "port": "Port",
+        "secret-key": "Secret Key (SECRET_KEY)",
         "e-g-example-com": "e.g. example.com",
         "traffic-tracking": "Track traffic usage",
         "limit": "Limit",
@@ -837,20 +848,20 @@
             "last-traffic-reset": "Last Traffic Reset",
             "subscription-information": "Subscription Information",
             "subscription-url": "Subscription URL",
-            "expires-at": "Expires At",
-            "last-opened-at": "Last Opened At",
+            "expires-at": "Expires",
+            "last-opened-at": "Last Subscription Request",
             "last-user-agent": "Last User Agent",
-            "revoked-at": "Revoked At",
+            "revoked-at": "Last Revoked",
             "connection-information": "Connection Information",
             "trojan-password": "Trojan Password",
             "ss-password": "SS Password",
             "last-online": "Last Online",
             "last-connected-node": "Last Connected Node",
             "timestamps": "Timestamps",
-            "created-at": "Created At",
-            "updated-at": "Updated At",
+            "created-at": "Created",
+            "updated-at": "Updated",
             "tag": "Tag",
-            "first-connected-at": "First connected at",
+            "first-connected-at": "First Connected",
             "active-internal-squads": "Active Internal Squads"
         }
     },
@@ -887,6 +898,19 @@
             "ram-usage": "RAM Usage",
             "for-all-nodes": "For all nodes"
         }
+    },
+    "nodes-metrics": {
+        "no-data": "No metrics available",
+        "total-nodes":"Total Nodes",
+        "active-nodes": "Active Nodes",
+        "online-users":"Online Users",
+        "total-inbounds": "Total Inbounds",
+        "additional-info": "Additional Information",
+        "text-1":"Updates every 30 seconds from /metrics endpoint",
+        "text-2":"Not all data is visualized on this dashboard",
+        "text-3":"Inbound/Outbound traffic is the sum of all traffic from Panel or Node startup",
+        "from-prometheus": "Metrics from Prometheus",
+        "live-updates": "Live updates from /metrics endpoint"
     },
     "node-users-usage-drawer": {
         "widget": {
@@ -980,7 +1004,9 @@
         "total-processes": "Total Processes",
         "total-memory": "Combined Process Memory",
         "average-cpu": "Average CPU",
-        "heaviest-process": "Heaviest Process"
+        "heaviest-process": "Heaviest Process",
+        "heap-used": "Heap Used",
+        "event-loop-delay": "Average Event Loop Delay"
     },
     "internal-squads-header": {
         "widget": {
@@ -1186,7 +1212,9 @@
                 "loading-accessible-nodes": "Loading accessible nodes...",
                 "no-accessible-nodes-found-for-this-user": "No accessible nodes found for this user",
                 "access-summary": "Access Summary",
-                "user-accessible-nodes": "User Accessible Nodes"
+                "user-accessible-nodes": "User Accessible Nodes",
+                "inbounds": "Inbound(s)",
+                "nodes-inbounds": "Nodes / Inbounds"
             }
         }
     },
@@ -1337,6 +1365,10 @@
         "hide-zero-values": "Hide zero values",
         "no-inbound-traffic-data": "No inbound traffic data",
         "no-outbound-traffic-data": "No outbound traffic data",
+        "inbound-traffic": "Inbound Traffic",
+        "outbound-traffic": "Outbound Traffic",
+        "up": "Up",
+        "down": "Down",
         "widget": {
             "node-details": "Node Details",
             "enable-node": "Enable Node",
@@ -1799,6 +1831,7 @@
         "node-v": "Node V.",
         "provider": "Provider",
         "tags": "Tags",
+        "tags-placeholder": "Enter tags (separated by comma, space, or semicolon)",
         "total-ram": "Total RAM",
         "cpu-model": "CPU Model"
     },

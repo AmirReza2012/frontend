@@ -53,14 +53,14 @@ export const getRuntimeSummaryMetrics = (
         {
             value: prettyBytesToAnyUtil(totalHeapUsed, true),
             IconComponent: PiTreeStructureDuotone,
-            title: 'Heap Used',
+            title: t('pm2-metrics.heap-used'),
             iconVariant: 'soft',
             iconColor: 'green'
         },
         {
             value: `${avgEventLoopDelay.toFixed(2)} ms`,
             IconComponent: PiTimerDuotone,
-            title: 'Avg Event Loop',
+            title: t('pm2-metrics.event-loop-avg'),
             iconVariant: 'soft',
             iconColor: 'orange'
         }

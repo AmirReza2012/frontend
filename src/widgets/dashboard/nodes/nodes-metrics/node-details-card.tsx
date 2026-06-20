@@ -183,7 +183,7 @@ export const NodeDetailsCard = memo(
                                             whiteSpace: 'nowrap'
                                         }}
                                     >
-                                        Inbound Traffic
+                                        {t('node-details-card.inbound-traffic')}
                                     </Text>
                                 </Group>
 
@@ -215,7 +215,7 @@ export const NodeDetailsCard = memo(
                                                             size="9px"
                                                             tt="uppercase"
                                                         >
-                                                            Up
+                                                            {t('node-details-card.up')}
                                                         </Text>
                                                         <Text c="gray.3" ff="monospace" size="xs">
                                                             {stat.upload === '0'
@@ -238,7 +238,7 @@ export const NodeDetailsCard = memo(
                                                             size="9px"
                                                             tt="uppercase"
                                                         >
-                                                            Down
+                                                            {t('node-details-card.down')}
                                                         </Text>
                                                         <Text c="gray.3" ff="monospace" size="xs">
                                                             {stat.download === '0'
@@ -288,7 +288,7 @@ export const NodeDetailsCard = memo(
                                             whiteSpace: 'nowrap'
                                         }}
                                     >
-                                        Outbound Traffic
+                                        {t('node-details-card.outbound-traffic')}
                                     </Text>
                                 </Group>
                                 {filteredOutboundStats.length > 0 ? (
@@ -319,7 +319,7 @@ export const NodeDetailsCard = memo(
                                                             size="9px"
                                                             tt="uppercase"
                                                         >
-                                                            Up
+                                                            {t('node-details-card.up')}
                                                         </Text>
                                                         <Text c="gray.3" ff="monospace" size="xs">
                                                             {stat.upload === '0'
@@ -342,7 +342,7 @@ export const NodeDetailsCard = memo(
                                                             size="9px"
                                                             tt="uppercase"
                                                         >
-                                                            Down
+                                                            {t('node-details-card.down')}
                                                         </Text>
                                                         <Text c="gray.3" ff="monospace" size="xs">
                                                             {stat.download === '0'
