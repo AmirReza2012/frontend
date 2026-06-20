@@ -67,28 +67,28 @@
         "color": "Color"
     },
     "bandwidth-metrics": {
-        "current-year": "Current year",
+        "current-year": "This year",
         "from-last-year": "vs last year",
         "calendar-month": "Calendar month",
         "from-last-month-0": "vs last month",
         "last-30-days": "Last 30 days",
-        "from-last-month": "vs last month",
+        "from-last-month": "vs previous",
         "last-7-days": "Last 7 days",
-        "from-last-week": "vs last week",
+        "from-last-week": "vs previous 7 days",
         "today": "Today",
         "from-yesterday": "vs yesterday"
     },
     "online-metrics": {
-        "never-online": "Never online",
-        "online-this-week": "Online this week",
-        "online-today": "Online today",
-        "online-now": "Online now"
+        "never-online": "Never Connected",
+        "online-this-week": "Online This Week",
+        "online-today": "Online Today",
+        "online-now": "Currently Online"
     },
     "simple-metrics": {
         "system-uptime": "System uptime",
-        "ram-usage": "RAM usage",
-        "total-traffic": "Total traffic",
-        "total-online-on-nodes": "Total online on nodes"
+        "ram-usage": "System RAM Used",
+        "total-traffic": "Cumulative Traffic",
+        "total-online-on-nodes": "Users Online Across Nodes"
     },
     "users-metrics": {
         "disabled-users": "Disabled users",
@@ -142,21 +142,21 @@
     "use-table-columns": {
         "username": "Username",
         "status": "Status",
-        "last-connected-node": "Last connected node",
-        "expire-at": "Expires at",
-        "data-usage": "Data usage",
-        "sub-link": "Sub-link",
+        "last-connected-node": "Last Connected Node",
+        "expire-at": "Expires",
+        "data-usage": "Data Usage",
+        "sub-link": "Subscription Link",
         "description": "Description",
-        "traffic-reset": "Traffic reset",
+        "traffic-reset": "Last Traffic Reset",
         "never": "Never",
-        "online-at": "Online at",
+        "online-at": "Last Online",
         "last-ua": "Last UA",
         "lifetime-used": "Lifetime Usage",
-        "sub-link-revoked-at": "Sub-link revoked at",
-        "created-at": "Created at",
+        "sub-link-revoked-at": "Last Revoked",
+        "created-at": "Created",
         "internal-squads": "Internal Squads",
-        "first-connected-at": "First connected at",
-        "sub-last-opened-at": "Sub last opened at",
+        "first-connected-at": "First Connected",
+        "sub-last-opened-at": "Last Subscription Request",
         "tag": "Tag",
         "used-traffic": "Used Traffic (%)"
     },
@@ -169,7 +169,7 @@
             "update-external-squads": "Update external squads",
             "create-new-external-squad": "Create new external squad",
             "external-squad-name": "External Squad Name",
-            "update-templates": "Update templates",
+            "update-templates": "Update templates", // Redundant
             "create-new-template": "Create new template",
             "template-name": "Template name"
         }
@@ -311,7 +311,7 @@
             "2099-year": "year 2099",
             "hwid-user-limit-description": "This feature will only work if <highlight>Subscription → Settings (HWID Limit)</highlight> is enabled. <anchor>Learn more</anchor>.",
             "disable-hwid-limit": "Disable HWID Limit",
-            "hwid-device-limit": "HWID Device Limit",
+            "hwid-device-limit": "HWID Limit",
             "expire-at-description": "The date and time when the user's subscription will expire.",
             "internal-squads": "Internal squads",
             "internal-squads-description": "Specify which internal squads the user will be a member of."
@@ -340,7 +340,7 @@
             "subscription-url-description-line-2": "If you want to change it, please change it in the .env file and restart Remnawave using command:",
             "view-accessible-nodes": "View accessible nodes",
             "fetching-user-data": "Fetching user data...",
-            "more-actions": "More Actions",
+            "more-actions": "More actions",
             "management": "Management",
             "danger-zone": "Danger Zone",
             "information": "Information",
@@ -370,10 +370,10 @@
         "e-g-example-com": "e.g. example.com",
         "e-g-443": "e.g. 443",
         "path-e-g-ws": "path (e.g. /ws)",
-        "security-layer": "Security Layer",
+        "security-layer": "Security layer",
         "tls-transport-layer-security": "TLS (Transport Layer Security)",
         "none": "None",
-        "inbounds-default": "Inbound's default",
+        "inbounds-default": "Inbound default",
         "here-you-can-override-security-settings-from-xtls-config": "Here you can override security settings from XTLS Config.",
         "extra-xhttp": "XHTTP Extra",
         "xhttp-extra-params": "XHTTP extra parameters",
@@ -387,52 +387,52 @@
         "port-description-line-2": "In most cases, must match the port of selected inbound.",
         "sni-description-line-1": "SNI stands for Server Name Indication.",
         "sni-description-line-2": "If not specified, the value from config's inbound will be used.",
-        "host-visibility": "Host Visibility",
+        "host-visibility": "Host visibility",
         "select-one-inbound-to-apply-to-the-host": "Select an inbound to apply to the host",
-        "server-description-header": "Server Description",
+        "server-description-header": "Server description",
         "server-description-placeholder": "Maximum 30 characters",
         "this-will-only-be-used-for-xray-json-output": "This will only be used for Xray-JSON output.",
         "please-ensure-you-provide-a-valid-json-mux-object": "Please ensure you provide a valid JSON MUX object.",
         "for-more-information-refer-to": "For more information, refer to",
         "xtls-documentation": "XTLS documentation",
-        "final-mask-description": "The finalMask override allows you to fine-tune the finalMask in cases where the server-side and client-side finalMask configurations need to differ.<br/><br/>FinalMask will only be applied to Xray-JSON and Base64 client output formats.<br/><br/>Make sure to review the <anchor>Xray documentation</anchor>.",
+        "final-mask-description": "The finalMask override allows you to fine-tune the finalMask in cases where the server-side and client-side finalMask configurations need to differ.<br/><br/>FinalMask will only be applied to Xray-JSON and Base64 client output formats.<br/><br/>Make sure to check the <anchor>Xray documentation</anchor>.",
         "paste-default-mux-params": "Paste default Mux Params",
         "please-ensure-you-provide-a-valid-json-sockopt-object": "Please ensure you provide a valid JSON Sockopt object.",
         "paste-default-sockopt-params": "Paste default Sockopt Params",
         "basic": "Basic",
         "advanced": "Advanced",
         "connection-overrides": "Connection overrides",
-        "xray-json-and-raw": "Xray Json & Raw",
-        "hide-host": "Hide Host",
-        "hide-host-from-users-remnawave-will-send-host-only-for-raw-subscription-responses": "Hide host from users, Remnawave will send host only for RAW Subscription responses.",
+        "xray-json-and-raw": "Xray JSON & raw subscriptions",
+        "hide-host": "Hide host",
+        "hide-host-from-users-remnawave-will-send-host-only-for-raw-subscription-responses": "Hide this host from users. Remnawave will send the host only with raw subscription responses.",
         "apps-specific": "Apps specific",
         "single-domain": "Single domain",
         "default-mode-for-one-domain": "Default mode for one domain",
         "multi-domain": "Multi domain",
         "multi-domain-description": "Multiple domains separated by commas. Remnawave will randomly choose one of the domains.",
         "wildcard-domain": "Wildcard domain",
-        "wildcard-domain-description": "Wildcard pattern for subdomains. Remnawave will replace * with the randomly generated string.",
-        "override-sni-from-address": "Override SNI from Address",
-        "override-sni-from-address-description": "This option replaces the SNI value with the specified Address field value. This is particularly useful for multi-domain configurations or wildcard domains configuration.",
+        "wildcard-domain-description": "Wildcard pattern for subdomains. Remnawave will replace * with a randomly generated string.",
+        "override-sni-from-address": "Override SNI from address",
+        "override-sni-from-address-description": "Replaces the SNI value with the value from the Address field. Useful for multi-domain or wildcard-domain setups.",
         "legacy-options": "Legacy options",
         "shuffled-hosts-hover-card": "Shuffled hosts will be placed at the top of the list and sorted randomly.",
-        "vless-route-description": "From 1 to 65535, 0/empty to disable",
+        "vless-route-description": "From 1 to 65535. Use 0 or leave empty to disable.",
         "misc-settings": "Misc settings",
-        "shuffle-host": "Shuffle Host",
+        "shuffle-host": "Shuffle host",
         "mihomo-specific": "Mihomo Specific",
         "enable-x25519mlkem768": "Enable x25519mlkem768",
-        "pick-nodes-which-resolved-from-this-host-only-visual-assignment": "Pick nodes which resolved from this host. Only visual assignment.",
+        "pick-nodes-which-resolved-from-this-host-only-visual-assignment": "Choose which nodes are associated with this host. For display purposes only.",
         "nodes": "Nodes",
         "select-a-xray-json-template": "Select a Xray JSON Template",
         "xray-json-template": "Xray JSON Template",
-        "override-the-xray-json-template": "Override the Xray JSON template which will be used for this host.",
-        "vital-parameters": "Vital Parameters",
-        "exclude-this-host-from-specific-internal-squads": "Exclude this host from specific Internal Squads",
-        "excluded-internal-squads": "Excluded Internal Squads",
+        "override-the-xray-json-template": "Override the Xray JSON template used for this host.",
+        "vital-parameters": "General",
+        "exclude-this-host-from-specific-internal-squads": "Exclude this host from specific internal squads",
+        "excluded-internal-squads": "Excluded internal squads",
         "keep-sni-blank": "Keep SNI blank",
         "keep-sni-blank-description": "In some cases, SNI must be left blank. Use this option to force an empty SNI. Note that this option has the highest priority, so it will be applied even if SNI is already set.",
-        "select-one-or-more-subscription-types-description": "Select one or more subscription types to exclude host from that subscription type.",
-        "exclude-from-subscription-type": "Exclude from Subscription Type",
+        "select-one-or-more-subscription-types-description": "Select one or more subscription types to exclude host from.",
+        "exclude-from-subscription-type": "Exclude from subscription type",
         "hidden-host-description": "By default, Remnawave will not include hidden hosts in the subscription. Hidden host can be used with Mihomo and Xray-Json Advanced, Raw.",
         "server-description-1": "In supported clients, the protocol name (e.g. vless) will be replaced with the description specified here.",
         "server-description-2": "Not all client applications support this feature. For more details, refer to the documentation of the apps listed below.",
@@ -441,7 +441,7 @@
     "base-node-form": {
         "country": "Country",
         "select-country": "Select country",
-        "internal-name": "Internal name",
+        "internal-name": "Internal Name",
         "internal-name-placeholder": "e.g. US-NY-Node-01",
         "address": "Address",
         "e-g-example-com": "e.g. example.com",
@@ -464,31 +464,31 @@
     },
     "home": {
         "page": {
-            "online-stats": "Online stats",
+            "online-stats": "User Activity",
             "system": "System",
             "bandwidth": "Bandwidth",
             "short-stats": "Home",
             "remnawave-usage": "Remnawave Usage",
-            "process-details": "Process Details"
+            "process-details": "Process Overview"
         },
         "runtime-info": {
             "title": "Runtime Metrics Guide",
-            "subtitle": "What every number on a runtime card actually means",
-            "intro": "Each card shows a live snapshot of a single <highlight>Remnawave process</highlight>. Use this guide to understand what each metric measures and when to worry about it.",
+            "subtitle": "Understand what each runtime metric means and when it may indicate a problem.",
+            "intro": "Each card displays a live snapshot of a single <highlight>Remnawave process</highlight>. Use this guide to understand what each metric measures and when it would require attention.",
             "instance-types-title": "Process Types",
-            "instance-types-description": "Remnawave is split into several specialized processes. Each one has its own job, its own memory, and its own event loop.",
-            "api-description": "Handles every HTTP requests from the dashboard, and subscription endpoints. This is the <highlight>main user-facing process</highlight> — virtually every panel and subscription request is served here.",
-            "scheduler-description": "A <highlight>cron-driven dispatcher</highlight>. It does not run any work itself — at the scheduled moment it simply pushes a job into the queue for the <highlight>Processor</highlight> to pick up.",
-            "processor-description": "The actual <highlight>worker</highlight>. It consumes queued jobs and runs the heavy lifting: <highlight>node health checks</highlight>, <highlight>traffic aggregation</highlight> per user and per node, and other long-running tasks that must not block the API.",
+            "instance-types-description": "Remnawave is split into several specialized processes. Each one has its own job, its own memory allocation, and its own event loop.",
+            "api-description": "Handles all HTTP requests from the dashboard and subscription endpoints. This is the <highlight>main user-facing process</highlight> — nearly every dashboard action and subscription request passes through this process.",
+            "scheduler-description": "A <highlight>cron-driven dispatcher</highlight>. Being a scheduler, it does not perform any work itself — at the scheduled time, it simply places a job onto the queue for the <highlight>Processor</highlight> to pick up.",
+            "processor-description": "The actual <highlight>worker</highlight>. It consumes queued jobs and does the heavy lifting: <highlight>node health checks</highlight>, <highlight>traffic aggregation</highlight> (per user and per node,) and other long-running tasks that must not block the API.",
             "memory-description": "Where the process holds its working data. All values are reported by Node.js in real time.",
-            "heap-description": "Memory used by JavaScript objects, managed by <highlight>V8</highlight> — Node.js' engine. Shown as <highlight>used / total</highlight>. A high ratio is <highlight>expected and healthy</highlight> — V8 holds onto memory until it really needs more, so something like <highlight>100 / 120 MB</highlight> is normal, not a warning.",
-            "rss-description": "<highlight>Resident Set Size</highlight> — the total physical memory the OS has given to the process, including the heap, native code, and shared libraries. The best single signal of <highlight>how much RAM this process is actually using</highlight>.",
-            "external-description": "Memory held outside V8 by native C++ objects bound to JavaScript — typical sources are <highlight>open sockets</highlight>, <highlight>streams</highlight>, and Buffer-backed payloads.",
-            "array-buffers-description": "Memory specifically allocated for <highlight>ArrayBuffer</highlight> and <highlight>Buffer</highlight> instances (raw binary data). It is counted as a subset of <highlight>External</highlight>.",
-            "event-loop-description": "Health of the single-threaded loop that drives all asynchronous work in Node.js. If the loop is blocked, the whole process stalls.",
-            "delay-description": "Average time between consecutive event loop ticks. A healthy value sits close to <highlight>0–2 ms</highlight>. Higher numbers mean the loop is being blocked by long synchronous work.",
-            "p99-description": "<highlight>99th percentile</highlight> of event loop delay over the measurement window. Reveals worst-case latency that the average alone hides — useful for spotting occasional spikes.",
-            "active-handles-description": "Long-lived resources keeping the loop alive: <highlight>open sockets</highlight>, <highlight>timers</highlight>, <highlight>file descriptors</highlight>. Steady-state is normal; <highlight>unbounded growth</highlight> is a strong leak signal."
+            "heap-description": "Memory used by JavaScript objects, managed by <highlight>V8</highlight> — Node.js' engine. Shown as <highlight>used / total</highlight>. A high ratio is <highlight>expected and healthy</highlight> — V8 intentionally retains memory to reduce allocation overhead, so something like <highlight>100 / 120 MB</highlight> is normal and not problematic.",
+            "rss-description": "<highlight>Resident Set Size</highlight> — the total physical memory the OS has given to the process, including the heap, native code, and shared libraries. The most useful indicator of <highlight>how much RAM the process is actually consuming</highlight>.",
+            "external-description": "Memory held outside V8 by native C++ objects bound to JavaScript — common sources include <highlight>open sockets</highlight>, <highlight>streams</highlight> and buffer-backed payloads.",
+            "array-buffers-description": "Memory specifically allocated for <highlight>ArrayBuffer</highlight> and <highlight>Buffer</highlight> instances (raw binary data). It is considered to be a subset of <highlight>External</highlight>.",
+            "event-loop-description": "Metrics describing the health status of Node.js's single-threaded event loop. If the loop is blocked, the whole process stalls.",
+            "delay-description": "Average delay experienced by the event loop before processing scheduled work. A healthy value sits close to <highlight>0–2 ms</highlight>. Higher numbers mean the loop is being blocked by long synchronous work.",
+            "p99-description": "<highlight>99th percentile</highlight> of event loop delay over the measurement window. Reveals rare latency spikes that averages can hide.",
+            "active-handles-description": "Long-lived resources keeping the loop alive: <highlight>open sockets</highlight>, <highlight>timers</highlight>, <highlight>file descriptors</highlight>. Steady-state is normal but <highlight>unbounded growth</highlight> is a strong leak signal."
         }
     },
     "login-form": {
@@ -504,17 +504,17 @@
             "no-data-available-for-the-selected-period": "No data available for the selected period",
             "click-to-see-all": "Click to see all",
             "no-data-available": "No data available",
-            "current-month": "Current Month",
+            "current-month": "Current month",
             "7-days": "7 days",
             "14-days": "14 days",
             "30-days": "30 days",
             "60-days": "60 days",
             "90-days": "90 days",
             "180-days": "180 days",
-            "total-traffic": "Total Traffic",
-            "total-traffic-placeholder": "Total Traffic: {{totalTraffic}}",
+            "total-traffic": "Total traffic",
+            "total-traffic-placeholder": "Total traffic: {{totalTraffic}}",
             "top-nodes": "Top Nodes",
-            "filter-nodes": "Filter Nodes",
+            "filter-nodes": "Filter nodes",
             "previous-day": "Previous day",
             "next-day": "Next day",
             "node": "Node",
@@ -548,7 +548,7 @@
     "get-time-ago": {
         "util": {
             "invalid-date": "Invalid Date",
-            "not-connected-yet": "Not connected yet"
+            "not-connected-yet": "Never connected"
         }
     },
     "toggle-user-status-button": {
@@ -593,28 +593,28 @@
             "this-title-will-be-displayed-as-subscription-name": "This title will be displayed as the subscription name.",
             "profile-title": "Profile title",
             "enter-profile-title": "Enter profile title",
-            "auto-update-description": "Some client applications follow this interval to auto-update the subscription.",
+            "auto-update-description": "Some client applications use this interval to auto-update the subscription.",
             "auto-update-interval-hours": "Auto-update interval (hours)",
-            "support-link-description": "Some clients will display this link in the subscription information. The link should lead the user to the support page.",
+            "support-link-description": "Some clients display this link in the subscription info. It should point to your support page.",
             "support-link": "Support link",
             "happ-settings": "Happ settings",
             "happ-announce-description": "200 characters maximum. Will be displayed under the subscription name in Happ.",
             "happ-announce": "Happ Announce",
             "enter-happ-announce-max-200-characters": "Enter Happ Announce, max. 200 characters",
-            "happ-routing-description": "Happ routing is a feature that allows you to configure the routing rules that Xray-Core will use through the subscription link.",
+            "happ-routing-description": "Configure the routing rules that xray-core uses through the subscription link.",
             "happ-routing-description-line-2": "A routing link for Happ can be obtained through Remnawave's Happ Routing Builder. The button below will redirect you to the aforementioned page.",
             "configure-happ-routing": "Happ Routing Builder",
             "happ-routing": "Happ routing",
-            "user-status-remarks-description": "The following values will be displayed in the subscription page if the user is expired, limited or disabled.",
+            "user-status-remarks-description": "The following values are displayed on the subscription page if the user is expired, limited, or disabled.",
             "user-status-remarks-description-line-2": "You can add multiple remarks for each status.",
             "user-status-remarks-description-line-3": "Because expired, limited and disabled users are not able to connect to the server, they will see these remarks in the client instead of receiving an empty subscription.",
             "update-settings": "Update settings",
             "enabled": "Enabled",
             "disabled": "Disabled",
-            "profile-webpage-url": "Profile Webpage URL",
-            "profile-webpage-url-description": "Used by some clients. Enabled by default, domain obtained from SUB_PUBLIC_DOMAIN .env variable.",
+            "profile-webpage-url": "Profile webpage URL",
+            "profile-webpage-url-description": "Used by some clients. Enabled by default, the domain address is taken from SUB_PUBLIC_DOMAIN environment variable.",
             "serve-json-at-base-subscription": "Serve JSON at base subscription",
-            "serve-json-description": "Serve JSON configurations at the base subscription path (without having to append /json). If the client supports it, it will be served JSON, otherwise it will be served as usual.",
+            "serve-json-description": "Serve JSON configurations at the base subscription path (no need to append /json). Clients that support it receive JSON; others are served as usual.",
             "subscription-info-description": "Subscription links are supported by many client apps such as Happ, v2RayNG, Streisand, etc.",
             "happ-description-line-1": "Here you can configure settings specific to Happ.",
             "happ-description-line-2": "These settings will only apply to subscription links that are imported in Happ.",
@@ -800,11 +800,11 @@
         "widget": {
             "title": "Active Sessions",
             "requirements": "Requirements",
-            "warning-activity": "An IP address will be shown when <highlight>Xray-Core</highlight> considers the <highlight>connection still open</highlight>. This may result in some displayed IP addresses that are no longer actually connected. Use the <highlight>clock</highlight> icon to track the last activity of a given IP.",
+            "warning-activity": "An IP address is shown while <highlight>Xray-core</highlight> considers the connection open. As a result, some IP addresses may still appear even though they're no longer connected. Use the <highlight>clock</highlight> icon to track the last activity for a given IP.",
             "warning-version": "Remnawave Node version <highlight>{{version}}</highlight> or higher",
-            "warning-docker": "Add the following to <highlight>docker-compose.yml</highlight> of Remnawave Node (/opt/remnanode)",
+            "warning-docker": "Add the following to the <highlight>docker-compose.yml</highlight> of your Remnawave node (/opt/remnanode)",
             "warning-patience": "Fetching data may take some time, do not close this window!",
-            "warning-n-plus-one": "<highlight>Please note</highlight>: this request performs <highlight>N+1</highlight> operations to gRPC API of <highlight>Xray-Core</highlight> due to the lack of bulk data retrieval methods. <highlight>N</highlight> is the number of users currently online on the given node.",
+            "warning-n-plus-one": "<highlight>Please note</highlight>: this request performs <highlight>N+1</highlight> operations to gRPC API of <highlight>Xray-core</highlight> due to the lack of bulk data retrieval methods. <highlight>N</highlight> is the number of users currently online on the given node.",
             "get-data": "Get Data",
             "fetching": "Fetching active sessions...",
             "progress": "Completed {{completed}} of {{total}} nodes",
@@ -858,19 +858,19 @@
         "widget": {
             "show-custom-remarks": "Show custom remarks",
             "show-custom-remark-description-line-1": "Only for EXPIRED, LIMITED and DISABLED users.",
-            "show-custom-remark-description-line-2": "If this setting is disabled, EXPIRED, LIMITED and DISABLED users will receive an actual empty host list instead.",
+            "show-custom-remark-description-line-2": "If disabled, EXPIRED, LIMITED, and DISABLED users receive an empty host list instead.",
             "additional-response-headers": "Response headers",
-            "headers-that-will-be-sent-with-subscription-content": "Headers that will be sent with the subscription content.",
+            "headers-that-will-be-sent-with-subscription-content": "Custom headers added to the subscription response.",
             "randomize-hosts": "Randomize hosts",
             "randomize-hosts-description": "Randomize hosts in subscription content",
-            "additional-options": "Additional Options",
+            "additional-options": "Additional options",
             "configure-additional-subscription-options": "Configure additional subscription options",
             "error": "Error",
             "save-settings": "Save Settings",
             "save-your-subscription-settings-to-apply-changes": "Save your subscription settings to apply changes",
-            "announce-and-routing": "Announce & Routing",
+            "announce-and-routing": "Announcement & routing",
             "announce-and-routing-description": "Configure announce message and routing rules for supported clients",
-            "announce-description": "This text will be displayed beneath the subscription name in supported clients such as Happ and v2rayTUN",
+            "announce-description": "Displayed beneath the subscription name in supported clients such as Happ and v2RayTUN.",
             "enter-announce-text-max-200-characters": "Enter Announce text, max. 200 characters"
         }
     },
@@ -978,7 +978,7 @@
     },
     "pm2-metrics": {
         "total-processes": "Total Processes",
-        "total-memory": "Total Memory",
+        "total-memory": "Combined Process Memory",
         "average-cpu": "Average CPU",
         "heaviest-process": "Heaviest Process"
     },
@@ -995,8 +995,8 @@
             "inbounds": "Inbounds",
             "users": "Users",
             "edit-inbounds": "Edit inbounds",
-            "remove-users": "Remove users",
-            "add-users": "Add users"
+            "remove-users": "Remove all users",
+            "add-users": "Add all users"
         }
     },
     "config-profiles-grid": {
@@ -1219,7 +1219,7 @@
     "show-config-profiles-with-inbounds": {
         "feature": {
             "config-profile": "Config Profile",
-            "select-the-config-profile-that-will-be-applied-to-this-node": "Select the config profile that will be applied to this node",
+            "select-the-config-profile-that-will-be-applied-to-this-node": "Select the config profile to apply to this node.",
             "no-config-profile-selected": "No config profile selected",
             "choose-a-profile-to-configure-inbounds-for-this-node": "Choose a profile to configure inbounds for this node"
         }
@@ -1274,25 +1274,26 @@
     },
     "hosts-filters": {
         "feature": {
-            "all-config-profiles": "All Config Profiles",
-            "all-inbounds": "All Inbounds",
+            "all-config-profiles": "All config profiles",
+            "all-inbounds": "All inbounds",
             "filters": "Filters",
             "select-config-profile": "Select config profile",
             "select-inbound": "Select inbound",
-            "search-by-remark": "Search by remark...",
+            "search-by-remark": "Remark",
             "address": "Address",
-            "filter-by-tags": "Filter by tags"
+            "filter-by-tags": "Tags"
         }
     },
     "disclaimer-overlay": {
         "title": "Disclaimer",
-        "subtitle": "Please read this notice before you continue.",
-        "intro": "Remnawave is an <highlight>open-source, self-hosted</highlight> proxy and user-management tool. It is provided <warning>\"as is\", without any warranty</warning> of any kind, express or implied.",
-        "responsibility": "You are <highlight>solely responsible</highlight> for how you deploy and use this software.",
-        "compliance": "You must comply with <highlight>all laws and regulations</highlight> applicable in your jurisdiction.",
-        "liability": "The developers and contributors accept <warning>no liability</warning> for any misuse, damage, or data loss.",
-        "license-acknowledgement": "By continuing you acknowledge that you have read and agree to the <anchor>license terms</anchor>.",
-        "accept-button": "I understand and accept"
+        "subtitle": "Please read this notice before continuing.",
+        "intro": "Remnawave is an <highlight>open-source, self-hosted</highlight> proxy and user management platform. It is provided <warning>\"as is\", without any warranties</warning> of any kind, whether express or implied.",
+        "responsibility": "You are <highlight>solely responsible</highlight> for how you deploy, configure and use this software.",
+        "compliance": "You must comply with <highlight>all applicable laws, regulations and policies</highlight> in your jurisdiction.",
+        "liability": "The developers and contributors <warning>shall not be liable</warning> for any misuse of the software or for any direct, indirect, incidental, consequential, or special damages, including data loss, service interruptions, or security incidents.",
+        "license-acknowledgement": "By continuing, you acknowledge that you have read and understood this notice and agree to the applicable <anchor>license terms</anchor>.",
+        "accept-button": "Accept and Continue",
+        "shown-once": "This notice will only be shown once."
     },
     "mobile-warning-overlay": {
         "mobile-device-detected": "Mobile Device Detected",
@@ -1308,19 +1309,19 @@
     },
     "internal-squad-header-action-buttons": {
         "feature": {
-            "create-internal-squad": "Create Internal Squad",
+            "create-internal-squad": "Create new internal squad",
             "create-a-new-internal-squad-by-entering-a-name-below": "Create a new internal squad by entering a name below.",
             "it-cant-be-changed-later": "It can't be changed later",
-            "squad-name": "Squad Name",
-            "enter-squad-name": "Enter squad name"
+            "squad-name": "Name",
+            "enter-squad-name": "Enter your new internal squad's name"
         }
     },
     "config-profiles-header-action-buttons": {
         "feature": {
-            "create-config-profile": "Create Config Profile",
-            "create-a-new-config-profile-by-entering-a-name-below": "Create a new config profile by entering a name below.",
-            "you-can-customize-xray-config-after-creation": "You can customize XRay config after creation.",
-            "profile-name": "Profile Name",
+            "create-config-profile": "Create new config profile",
+            "create-a-new-config-profile-by-entering-a-name-below": "Create a new config profile.",
+            "you-can-customize-xray-config-after-creation": "You can customize the new configuration once it's created",
+            "profile-name": "Profile name:",
             "enter-profile-name": "Enter profile name"
         }
     },
@@ -1340,7 +1341,7 @@
             "node-details": "Node Details",
             "enable-node": "Enable Node",
             "disable-node": "Disable Node",
-            "config-profile-or-inbounds-is-missing": "Config profile or inbounds is missing",
+            "config-profile-or-inbounds-is-missing": "Config profile or inbounds missing",
             "xray-core-version": "Xray Core Version",
             "remnawave-node-version": "Node version, @remnawave/node"
         }
@@ -1351,7 +1352,7 @@
                 "config-profiles": "Config Profiles",
                 "no-profile-selected": "No profile selected",
                 "no-inbounds-selected": "No inbounds selected",
-                "choose-config-profile-to-apply-to-the-node": "Choose Config Profile to apply to the node.",
+                "choose-config-profile-to-apply-to-the-node": "Choose a config profile to apply to this node.",
                 "apply-changes": "Apply changes",
                 "search-profiles-or-inbounds": "Search profiles or inbounds...",
                 "no-profiles-or-inbounds-found": "No profiles or inbounds found",
@@ -1400,7 +1401,7 @@
     "host-tags-input": {
         "tag-can-only-contain-uppercase-letters-numbers-underscores-and-colons": "Tag can only contain uppercase letters, numbers, underscores and colons",
         "tag-must-be-less-than-32-characters": "Tag must be less than 32 characters",
-        "tags-are-not-visible-to-end-users-tag-will-be-sent-with-raw-subscription-only": "Tags are not visible to end users. Tag will be sent with RAW subscription only.",
+        "tags-are-not-visible-to-end-users-tag-will-be-sent-with-raw-subscription-only": "Tags are not visible to the end user. They are sent with raw subscription only.",
         "clear-value": "Clear value"
     },
     "rename-modal": {
@@ -1444,18 +1445,18 @@
     },
     "hwid-inspector-table": {
         "widget": {
-            "hwid-devices-list": "HWID Devices list"
+            "hwid-devices-list": "HWID & devices list"
         }
     },
     "hwid-inspector-metrics": {
         "widget": {
             "apps": "Apps",
             "platforms": "Platforms",
-            "total-unique-devices": "Total Unique Devices",
-            "total-hwid-devices": "Total HWID Devices",
-            "avg-devices-per-user": "Avg Devices Per User",
-            "platform-distribution": "Platform Distribution",
-            "app-distribution": "App Distribution",
+            "total-unique-devices": "Total unique devices",
+            "total-hwid-devices": "Total HWID devices",
+            "avg-devices-per-user": "Avg devices per user",
+            "platform-distribution": "Platform distribution",
+            "app-distribution": "App distribution",
             "no-platform-data": "No platform data available",
             "no-app-data": "No app data available"
         }
@@ -1546,8 +1547,8 @@
     "external-squad-card": {
         "widget": {
             "users": "Users",
-            "add-users": "Add users",
-            "remove-users": "Remove users"
+            "add-users": "Add all users",
+            "remove-users": "Remove all users"
         }
     },
     "internal-squads-with-store": {
@@ -1561,8 +1562,8 @@
         "drawer": {
             "widget": {
                 "subscription-templates": "Subscription Templates",
-                "subscription-templates-description-line-1": "Select one template for each subscription type. If not selected, the default template will be used automatically.",
-                "subscription-templates-description-line-2": "Please note, Response Rules have a higher priority.",
+                "subscription-templates-description-line-1": "Select one template for each subscription type. If none is selected, the default template is used automatically.",
+                "subscription-templates-description-line-2": "Please note that Response Rules take priority over these templates.",
                 "select-a-template": "Select a template",
                 "default-template-in-use": "Default template in use...",
                 "edit-external-squad": "Edit external squad",
@@ -1588,7 +1589,7 @@
     "external-squads-settings": {
         "tab": {
             "widget": {
-                "override-subscription-settings-for-this-external-squad": "Override subscription settings for this external squad",
+                "override-subscription-settings-for-this-external-squad": "Override subscription settings for this external squad.",
                 "add-override": "Add override"
             }
         }
@@ -1694,7 +1695,7 @@
     },
     "api-tokens-card": {
         "widget": {
-            "api-tokens-description": "Manage your API access tokens for programmatic access.",
+            "api-tokens-description": "Manage your API tokens for programmatic access.",
             "api-tokens": "API Tokens",
             "no-api-tokens-found": "No API tokens found",
             "token-name": "Token Name",
@@ -1721,12 +1722,12 @@
     },
     "help-action-icon": {
         "shared": {
-            "help-article": "Help Article"
+            "help-article": "Help article"
         }
     },
     "internal-squad-card": {
         "widget": {
-            "available-nodes": "Available Nodes"
+            "available-nodes": "Accessible Nodes"
         }
     },
     "help-drawer": {
@@ -1747,13 +1748,13 @@
     },
     "subscription-hwid-settings": {
         "widget": {
-            "hwid-card-description": "Carefully review documentation before enabling HWID feature. Not all client applications support this feature.",
-            "hwid-settings": "HWID Settings",
-            "hwid-limit": "HWID Limit",
+            "hwid-card-description": "Carefully read the documentation before enabling HWID feature. Not all client applications support this feature.",
+            "hwid-settings": "HWID settings",
+            "hwid-limit": "HWID limit",
             "fallback-device-limit-description": "Enter the maximum number of devices that can be used with a subscription",
-            "fallback-device-limit": "Fallback Device Limit",
+            "fallback-device-limit": "Fallback device limit",
             "max-devices-announce-description": "Enter message that will be displayed when the user has reached the maximum number of devices",
-            "max-devices-announce": "Max Devices Announce",
+            "max-devices-announce": "Max devices reached message",
             "max-200-characters": "Max. 200 characters",
             "documentation": "Documentation"
         }
@@ -1762,7 +1763,7 @@
         "tab": {
             "widget": {
                 "hwid-settings-override": "HWID Settings Override",
-                "override-hwid-description": "Override HWID device limit settings for this external squad. When disabled, global subscription settings will be used.",
+                "override-hwid-description": "Override HWID limit settings for this external squad. When disabled, global subscription settings will be used.",
                 "enable-hwid-override": "Enable HWID Override"
             }
         }
@@ -1776,10 +1777,10 @@
     "subscription-user-remarks-card": {
         "widget": {
             "user-status": "User status",
-            "empty-hosts": "Empty Hosts",
-            "empty-internal-squads": "Empty Internal Squads",
-            "hwid-max-devices-exceeded": "HWID: Max Devices Exceeded",
-            "hwid-not-supported": "HWID: Not Supported"
+            "empty-hosts": "Empty hosts",
+            "empty-internal-squads": "Empty internal squads",
+            "hwid-max-devices-exceeded": "HWID: Max devices exceeded",
+            "hwid-not-supported": "HWID: Not supported"
         }
     },
     "multi-select-nodes": {
@@ -1994,7 +1995,7 @@
     },
     "nodes-quick-stats": {
         "widget": {
-            "users-online": "Users Online",
+            "users-online": "Online Users",
             "online-nodes": "Online Nodes",
             "offline-nodes": "Offline Nodes",
             "cumulative-traffic": "Cumulative Traffic"
@@ -2028,16 +2029,16 @@
     "node-vitals": {
         "card": {
             "plugin": "Plugin",
-            "review-documentation-for-more-information": "Review documentation for more information.",
+            "review-documentation-for-more-information": "Check the documentation for details.",
             "nothing-found": "Nothing found...",
             "select-plugin": "Select plugin",
             "proxy-url": "Proxy URL",
-            "proxy-url-description": "Optional. If provided, internal API connection from panel to node will be proxied through this proxy."
+            "proxy-url-description": "Optional. If set, the internal API connection from the panel to the node is routed through this proxy."
         }
     },
     "node-plugin-card": {
         "widget": {
-            "active-on-nodes": "Active on Nodes"
+            "active-on-nodes": "Active on nodes"
         }
     },
     "adtive-on-nodes": {
@@ -2049,10 +2050,10 @@
     },
     "node-plugins-grid": {
         "widget": {
-            "node-plugins-are-an-advanced-feature-please-review-the-documentation-before-use": "Node Plugins are an advanced feature. Please review the documentation before use.",
+            "node-plugins-are-an-advanced-feature-please-review-the-documentation-before-use": "Node Plugins are an advanced feature. Please check the documentation before use.",
             "warning": "Warning",
             "no-node-plugins-yet": "No node plugins yet",
-            "create-a-plugin-to-extend-node-capabilities-with": "Create a plugin to extend node capabilities with"
+            "create-a-plugin-to-extend-node-capabilities-with": "Create a plugin to extend node capabilities:"
         }
     },
     "node-plugin-executor": {
@@ -2109,9 +2110,9 @@
     },
     "nodes-datatable": {
         "widget": {
-            "column-width": "Column Width",
-            "column-order": "Column Order",
-            "column-toggle": "Column Toggle"
+            "column-width": "Reset column width",
+            "column-order": "Reset column order",
+            "column-toggle": "Reset displayed columns"
         }
     },
     "user-torrent-blocker-report-item": {
