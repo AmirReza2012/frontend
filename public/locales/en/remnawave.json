@@ -176,7 +176,7 @@
             "create-new-host": "Create new host",
             "create-new-external-squad": "Create new external squad",
             "external-squad-name": "External Squad Name",
-            "update-templates": "Update templates", // Redundant
+            "update-templates": "Update templates",
             "create-new-template": "Create new template",
             "template-name": "Template name"
         }
