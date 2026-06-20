@@ -60,7 +60,7 @@ export const getRuntimeSummaryMetrics = (
         {
             value: `${avgEventLoopDelay.toFixed(2)} ms`,
             IconComponent: PiTimerDuotone,
-            title: t('pm2-metrics.event-loop-avg'),
+            title: t('pm2-metrics.event-loop-delay'),
             iconVariant: 'soft',
             iconColor: 'orange'
         }
