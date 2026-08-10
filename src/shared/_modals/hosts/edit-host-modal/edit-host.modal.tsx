@@ -102,6 +102,7 @@ export const EditHostDrawer = NiceModal.create((props: IProps) => {
                 vlessRouteId: host.vlessRouteId ?? undefined,
                 pinnedPeerCertSha256: host.pinnedPeerCertSha256 ?? undefined,
                 verifyPeerCertByName: host.verifyPeerCertByName ?? undefined,
+                cipherSuites: host.cipherSuites ?? undefined,
                 shuffleHost: host.shuffleHost ?? undefined,
                 mihomoX25519: host.mihomoX25519 ?? undefined,
                 mihomoIpVersion: host.mihomoIpVersion ?? undefined,
